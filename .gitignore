@@ -1,0 +1,25 @@
+# OS junk
+.DS_Store
+
+# Zsh state/history
+zsh/.config/zsh/.zcompdump*
+zsh/.config/zsh/.zsh_history
+
+# Karabiner backups
+karabiner/.config/karabiner/automatic_backups/
+
+# GitHub CLI auth (contains tokens)
+github/.config/gh/hosts.yml
+
+# Neovim generated files
+nvim/.config/nvim/spell/*.spl
+
+# Lazygit state (runtime, not config)
+lazygit/.config/lazygit/state.yml
+
+# Optional: plugin/vendor dirs
+zsh/.config/zsh/zsh-completions/
+zsh/.config/zsh/zsh-syntax-highlighting/
+
+# tmux plugins (managed by tpm)
+tmux/.config/tmux/plugins/

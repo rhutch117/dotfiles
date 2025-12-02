@@ -1,0 +1,86 @@
+[core]
+  excludesfile = ~/.config/git/gitignore_global
+  pager = delta
+  editor = nvim
+	autocrlf = input
+[interactive]
+  diffFilter = delta --color-only --features=interactive
+[add.interactive]
+  useBuiltin = false  # required for git 2.37.0
+[delta]
+  features = decorations interactive
+  navigate = true # use n and N to move between diff sections
+  light = false   # set to true if using a terminal w/ light background color
+[delta "interactive"]
+  keep-plus-minus-markers = false
+[delta "decorations"]
+  line-numbers = true
+  side-by-side = true
+  commit-decoration-style = blue ol
+  commit-style = raw
+  file-style = omit
+  hunk-header-decoration-style = blue box
+  hunk-header-file-style = red
+  hunk-header-line-number-style = "#067a00"
+  hunk-header-style = file line-number syntax
+[merge]
+    conflictstyle = diff3
+[blame]
+    date = format:"%Y-%m-%d"
+
+[diff]
+    colorMoved = default
+[user]
+	name = Ryan Hutchison
+	email = rwhutchison@live.com
+[credential]
+	username = rhutch117
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
+[ghq]
+  root = ~/Repos
+[alias]
+  st = status
+  ci = commit --verbose
+  co = checkout 
+  di = diff --find-copies-harder
+  dc = diff --find-copies-harder --cached
+  amend = commit --amend
+  aa = add --all
+  ff = merge --ff-only
+  noff = merge --no-ff
+  fa = fetch --all
+  pom = push origin main
+  p = pull
+
+  # Fancy logging.
+  #   h = head
+  #   hp = head with patch
+  #   r = recent commits, only current branch
+  #   ra = recent commits, all reachable refs
+  #   l = all commits, only current branch
+  #   la = all commits, all reachable refs
+  #   b = all branches
+  #   bs = all branches, sorted by last commit date
+  head = !git r -1
+  h = !git head
+  hp = "!. ~/.config/git/githelpers && show_git_head"
+  r = !GIT_NO_PAGER=1 git l -30
+  ra = !git r --all
+  l = "!. ~/.config/git/githelpers && pretty_git_log"
+  la = !git l --all
+  b = "!. ~/.config/git/githelpers && pretty_git_branch"
+  bs = "!. ~/.config/git/githelpers && pretty_git_branch_sorted"
+  ski = !git stash --keep-index
+  cp = cherry-pick
+  pf = push --force-with-lease
+
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

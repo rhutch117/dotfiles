@@ -1,0 +1,47 @@
+
+# General
+export DOTFILES="$HOME/.config"
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+
+# Editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+export MANPAGER='nvim +Man!'
+
+# Opt out of dotnet telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
+
+# prefer ripgrep for fzf fuzzy finder
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden'
+fi
+
+# NVM
+export NVM_DIR="$HOME/nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+
+# Libraries that the compiler will link to automatically
+# export LDFLAGS="-L/opt/homebrew/lib"                                          # start with hombrew libraries
+# export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/glfw/lib"                     # glfw abstracts os specific window functionality
+# export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/glew/lib"                     # glew abstracts driver specific graphics card functionality 
+
+# export LDFLAGS="${LDFLAGS} -L/opt/homebrew/Cellar/unixodbc/2.3.11/lib"       # needed for installing pyodbc
+# export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/Cellar/unixodbc/2.3.11/include"
+
+# export CPATH="${LDFLAGS}"                                # include libraries from homebrew
+
+
+# Apple no longer provides OpenSSL by default, so it must be manually installed
+# export LDFLAGS="${LDFLAGS} -L$(brew --prefix openssl)/lib -L/opt/homebrew/lib"
+# export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openssl)/include -I/opt/homebrew/include"
+# export LIBRARY_PATH="${CPPFLAGS} -I$(brew --prefix openssl)/include -I/opt/homebrew/include"
+# export CPATH="${LDFLAGS} -L$(brew --prefix openssl)/lib"
+
+
+# Zet 
+export ZETDIR="$HOME/Repos/github.com/rhutch117/zet/"

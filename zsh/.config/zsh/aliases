@@ -1,0 +1,78 @@
+###############################
+#         ALIASES             #
+###############################
+
+# Temporary
+alias tfapply-dev="terraform apply --var-file=envs/dev.tfvars"
+alias tfdestroy-dev="terraform destroy --var-file=envs/dev.tfvars"
+alias zshconfig="vim $ZDOTDIR/.zshrc"
+alias sourcezsh="source $ZDOTDIR/.zshrc"
+alias aliases="vim $ZDOTDIR/aliases"
+alias tf="terraform"
+
+# TODO: Research whether this consumes more memory every time or what? My
+# sourcing seems to be getting loger everytime I do it.
+alias sz="source ~/.config/zsh/.zshrc"
+
+# Launch `ng serve` in background and 
+# direct stderr and stdout to /dev/null
+# alias ngs="ng serve > /dev/null 2>&1 &"
+# alias leet="leetcode"
+
+# Lazygit
+alias lg="lazygit"
+
+# tmux
+alias tmux="TERM=xterm-256color tmux"
+alias tm="tmux"
+alias tma="tmux attach -t"
+alias tml="tmux ls"
+
+# Utilities
+alias ls="lsd -lah"      # ls with a tree view
+alias ll="eza -lah -g --icons --tree --level=2"      # ls with a tree view
+alias cat="bat"                     # Use 'bat' as a replacement for 'cat'
+alias grep='rg --color=auto'
+
+# System
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+alias vim="nvim"
+alias vi="nvim"
+
+# Navigation
+alias config="cd ~/.config"
+alias repos="cd ~/Repos"
+alias rhutch117="cd ~/Repos/github.com/rhutch117/"
+alias rhutch="cd ~/Repos/github.com/rhutch117/"
+alias rr="cd ~/Repos/github.com/rhutch117/"
+alias hut="cd ~/Repos/github.com/rhutch117/"
+alias hutch="cd ~/Repos/github.com/rhutch117/"
+alias aiops="cd ~/Repos/github.com/Ai-Ops-Inc/"
+alias wiki="cd ~/wiki/"
+
+# directory stacking
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# docker
+alias dockls="docker container ls | awk 'NR > 1 {print \$NF}'"                  # display names of running containers
+alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
+alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
+alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
+alias dockimg='docker images'                                                   # list images installed
+alias dockprune='docker system prune -a'                                        # prune everything
+alias dockceu='docker-compose run --rm -u $(id -u):$(id -g)'                    # run as the host user
+alias dockce='docker-compose run --rm'
+alias dockup='docker compose up'
+alias dockdown='docker compose down'
+alias docktest='docker compose run viu-account-server bash'
+alias dv='docker compose run viu-account-server bash'
+alias koios='docker build --tag koios-local:test --file Dockerfile . && docker run --rm -it -p 80:80 koios-local:test'
+
+alias dockrebuildprod="docker-compose -f docker-compose.prod.yml down && docker-compose -f docker-compose.prod.yml up -d --build"
+alias docklogsprod="docker-compose -f docker-compose.prod.yml logs -f"
+
+# Python venv management
+alias sv="source ./.venv/bin/activate"
+alias da="deactivate"
