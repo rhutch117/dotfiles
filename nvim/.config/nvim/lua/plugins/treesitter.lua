@@ -2,6 +2,9 @@ return {
     {
         -- Syntax tree parsing for more intelligent syntax highlighting and code navigation
         'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'OXY2DEV/markview.nvim',
+        },
         build = ':TSUpdate',
         main = 'nvim-treesitter.configs', -- Sets main module to use for opts
         -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
