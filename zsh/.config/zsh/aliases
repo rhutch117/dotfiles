@@ -56,7 +56,7 @@ alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # docker
-alias dockls="docker container ls | awk 'NR > 1 {print \$NF}'"                  # display names of running containers
+alias dockls='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"'
 alias dockRr='docker rm $(docker ps -a -q)'                                     # delete every containers / images
 alias dockRr='docker rm $(docker ps -a -q) && docker rmi $(docker images -q)'   # delete every containers / images
 alias dockstats='docker stats $(docker ps -q)'                                  # stats on images
