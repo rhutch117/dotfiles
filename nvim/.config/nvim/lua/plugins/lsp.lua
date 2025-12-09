@@ -79,6 +79,10 @@ return {
                     },
                 },
                 pylsp = {
+                    on_attach = function(client)
+                        -- prevent pylsp from providing "go to definition" (pyright handles this instead)
+                        client.server_capabilities.definitionProvider = false
+                    end,
                     settings = {
                         pylsp = {
                             plugins = {
