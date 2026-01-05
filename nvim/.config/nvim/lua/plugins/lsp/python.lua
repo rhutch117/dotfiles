@@ -5,7 +5,7 @@ function M.setup(mappings)
 
     vim.lsp.config.pylsp = vim.tbl_extend('force', vim.lsp.config.pylsp or {}, {
         diagnostics = {
-            -- keep parity with your Go/Lua setup (tiny-inline-diagnostic handles inline)
+            -- keep parity with Go/Lua setup (tiny-inline-diagnostic handles inline)
             virtual_text = false,
         },
         capabilities = capabilities,
