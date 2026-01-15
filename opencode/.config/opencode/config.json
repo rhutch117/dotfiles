@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "amazon-bedrock": {
+      "models": {
+        "amazon.nova-pro-v1:0": {
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          }
+        }
+      },
+      "options": {
+        "region": "us-gov-west-1",
+        "profile": "bedrock"
+      }
+    }
+  }
+}
