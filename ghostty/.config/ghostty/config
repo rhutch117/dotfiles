@@ -1,4 +1,5 @@
-keybind = cmd+k=clear_screen
+keybind = cmd+k=text:\x0c
 macos-titlebar-style = hidden
 
-theme = "TokyoNight"
+cursor-style = block
+cursor-style-blink = false
