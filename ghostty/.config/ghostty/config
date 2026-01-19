@@ -1,0 +1,4 @@
+keybind = cmd+k=clear_screen
+macos-titlebar-style = hidden
+
+theme = "TokyoNight"
