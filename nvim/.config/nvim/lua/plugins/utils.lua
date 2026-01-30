@@ -68,7 +68,7 @@ return {
             preset = 'modern',
             spec = {
                 { '<leader>', group = 'actions', icon = '' },
-                { '<leader>t', group = 'todo', icon = '' },
+                { '<leader>t', group = 'table', icon = '' },
                 { '<leader>l', group = 'lsp', icon = '' },
                 { '<leader><leader>b', group = 'dap/debug' },
                 { '<leader><leader>d', group = 'diagnostics' },

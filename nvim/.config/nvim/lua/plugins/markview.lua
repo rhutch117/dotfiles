@@ -10,7 +10,7 @@ return {
         },
         opts = {
             preview = {
-                enable = false,
+                enable = true,
             },
         },
         keys = {
