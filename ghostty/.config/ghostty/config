@@ -1,5 +1,9 @@
+theme = TokyoNight
 keybind = cmd+k=text:\x0c
 macos-titlebar-style = hidden
 
 cursor-style = block
 cursor-style-blink = false
+
+window-padding-x = 10
+window-padding-balance = true
