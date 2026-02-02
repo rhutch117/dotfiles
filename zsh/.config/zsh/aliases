@@ -9,6 +9,7 @@ alias zshconfig="vim $ZDOTDIR/.zshrc"
 alias sourcezsh="source $ZDOTDIR/.zshrc"
 alias aliases="vim $ZDOTDIR/aliases"
 alias tf="terraform"
+alias k="kubectl"
 
 # TODO: Research whether this consumes more memory every time or what? My
 # sourcing seems to be getting loger everytime I do it.
