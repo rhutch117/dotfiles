@@ -27,7 +27,6 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions.sh
 
-
 # VI KEYMAP
 # Vi Mode
 bindkey -v
@@ -57,14 +56,14 @@ done
 
 # HIGHLIGHTING & COMPLETIONS
 source $ZDOTDIR/completion.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Change the autocomplete text color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
-
 
 autoload -U +X bashcompinit && bashcompinit
 autoload -Uz +X compinit && compinit
 _comp_options+=(globdots) # with hidden files
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
