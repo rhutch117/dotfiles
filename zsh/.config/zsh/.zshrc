@@ -67,30 +67,4 @@ autoload -Uz +X compinit && compinit
 _comp_options+=(globdots) # with hidden files
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Ensure ~/utilities exists
-if [ ! -d "$HOME/utilities" ]; then
-  mkdir -p "$HOME/utilities"
-fi
-
-# Add ~/utilities to PATH if not already included
-case ":$PATH:" in
-  *":$HOME/utilities:"*) ;;
-  *) export PATH="$HOME/utilities:$PATH" ;;
-esac
-
 eval "$(starship init zsh)"
-
-# fnm
-FNM_PATH="/opt/homebrew/opt/fnm/bin"
-if [ -d "$FNM_PATH" ]; then
-  eval "`fnm env`"
-fi
-
-# pnpm
-export PNPM_HOME="/Users/ryanhutchison/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
