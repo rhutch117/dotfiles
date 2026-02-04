@@ -63,7 +63,7 @@ done
 
 # HIGHLIGHTING & COMPLETIONS
 source $ZDOTDIR/completion.zsh
-source $ZDOTDIR//zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Change the autocomplete text color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#7b8496"
 
