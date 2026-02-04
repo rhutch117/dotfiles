@@ -23,12 +23,6 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
 
-
-# https://github.com/pyenv/pyenv/issues/2256
-# eval "$(pyenv init - --no-rehash)"  # Only use --no-rehash option when terminal startup time is an issue
-eval "$(pyenv init -)"  # Use this method when there is no issue with terminal startup time
-
-
 # ALIASES & FUNCTIONS
 source $ZDOTDIR/aliases
 source $ZDOTDIR/functions.sh
