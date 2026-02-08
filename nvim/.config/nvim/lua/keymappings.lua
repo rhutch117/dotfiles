@@ -27,6 +27,11 @@ vim.keymap.set('n', '<leader>*', 'viw<esc>a*<esc>bi*<esc>lel', { desc = 'Surroun
 
 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 
+-- toggle checked / create checkbox if it doesn't exist
+vim.keymap.set('n', '<leader>nn', require('markdown-togglecheck').toggle, { desc = 'Toggle Checkmark' })
+-- toggle checkbox (it doesn't remember toggle state and always creates [ ])
+vim.keymap.set('n', '<leader>nN', require('markdown-togglecheck').toggle_box, { desc = 'Toggle Checkbox' })
+
 -- Visual --
 -- Stay in visual mode while indenting
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent selection left' })
