@@ -28,6 +28,11 @@ get_token() {
   source ~/utilities/get_token.sh
 }
 
+authcurl() {
+    curl -s -H "Authorization: Bearer $TOKEN" "$@" | jq .
+}
+
+
 # Get an access token and store it as $TOKEN in current shell
 get_bill_token() {
   source ~/utilities/get_bill_token.sh
