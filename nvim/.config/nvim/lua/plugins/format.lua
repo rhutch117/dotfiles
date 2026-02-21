@@ -36,19 +36,23 @@ return {
                 -- Conform can also run multiple formatters sequentially
                 go = { 'gofmt', 'goimports' },
                 lua = { 'stylua' },
-                python = { 'isort', 'ruff', 'black' },
+                python = {
+                    'ruff_organize_imports',
+                    'ruff_fix',
+                    'ruff_format',
+                },
                 cpp = { 'clang_format' },
                 hpp = { 'clang_format' },
                 yaml = { 'actionlint' },
                 --
                 -- You can use 'stop_after_first' to run the first available formatter from the list
-                javascript = { 'prettierd', 'prettier', stop_after_first = true },
-                typescript = { 'prettierd', 'prettier', stop_after_first = true },
-                typescriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-                javascriptreact = { 'prettierd', 'prettier', stop_after_first = true },
-                json = { 'prettierd', 'prettier', stop_after_first = true },
-                html = { 'prettierd', 'prettier', stop_after_first = true },
-                css = { 'prettierd', 'prettier', stop_after_first = true },
+                javascript = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                typescript = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                typescriptreact = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                javascriptreact = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                json = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                html = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
+                css = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
             },
             formatters = {
                 stylua = {
