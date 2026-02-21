@@ -1,5 +1,8 @@
 return {
     {
+        -- Neovim plugin to autmatically highlight other uses of the
+        -- word under the cursor
+        -- https://github.com/RRethy/vim-illuminate
         'RRethy/vim-illuminate',
         event = { 'BufReadPost', 'BufNewFile' },
         opts = {

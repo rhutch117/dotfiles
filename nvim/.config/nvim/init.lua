@@ -26,7 +26,6 @@ vim.opt.rtp:prepend(lazypath)
 -- https://github.com/folke/lazy.nvim/discussions/1652#discussioncomment-10049093
 --
 require('lazy').setup({
-    -- concurrency = 1, -- https://github.com/folke/lazy.nvim/discussions/747
     checker = {
         enabled = false,
     },
