@@ -100,6 +100,15 @@ return {
                         },
                     },
                 },
+                zls = {
+                    cmd = { 'zls' }, -- Configured using zvm
+                    settings = {
+                        zls = {
+                            -- make zls use the same zig your shell resolves (zvm-controlled)
+                            zig_exe_path = vim.fn.exepath('zig'),
+                        },
+                    },
+                },
                 ts_ls = {},
                 lua_ls = {
                     settings = {

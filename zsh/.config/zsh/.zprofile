@@ -9,6 +9,11 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 # This is where uv stores python versions
 export PATH="/Users/ryan/.local/bin:$PATH"
 
+# ZVM to manage zig versions
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
 # Add postgresql@16 to PATH
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
