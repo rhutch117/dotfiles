@@ -47,3 +47,5 @@ case ":$PATH:" in
   *) export PATH="$HOME/utilities:$PATH" ;;
 esac
 
+# Add linkerd cli tool to path
+export PATH=$HOME/.linkerd2/bin:$PATH

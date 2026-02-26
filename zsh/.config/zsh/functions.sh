@@ -25,7 +25,7 @@ EOF
 
 # Get an access token and store it as $TOKEN in current shell
 get_token() {
-  source ~/utilities/get_token.sh
+  source ~/.config/bin/get_aswan_token.sh
 }
 
 authcurl() {
