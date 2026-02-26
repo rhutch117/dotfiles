@@ -12,7 +12,7 @@ return {
             -- mason setup
             require('mason').setup()
             local mason_lsp = require('mason-lspconfig')
-            local servers = { 'clangd', 'gopls', 'pyright', 'pylsp', 'ts_ls', 'lua_ls' }
+            local servers = { 'clangd', 'gopls', 'pyright', 'pylsp', 'ts_ls', 'lua_ls', 'ruff' }
 
             mason_lsp.setup({
                 ensure_installed = servers,
