@@ -67,3 +67,4 @@ autoload -Uz +X compinit && compinit
 _comp_options+=(globdots) # with hidden files
 
 eval "$(starship init zsh)"
+export PATH="$HOME/.local/bin:$PATH"
