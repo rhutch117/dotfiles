@@ -87,6 +87,9 @@ return {
                         pylsp = {
                             plugins = {
                                 pyflakes = { enabled = false },
+                                pycodestyle = {
+                                    maxLineLength = 120,
+                                }
                             },
                         },
                     },
@@ -109,6 +112,7 @@ return {
                         },
                     },
                 },
+                sqlfluff = {},
                 ts_ls = {},
                 lua_ls = {
                     settings = {

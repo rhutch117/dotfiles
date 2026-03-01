@@ -2,7 +2,7 @@ return {
     {
         'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
     },
-    { -- Autoformat
+    {                       -- Autoformat
         'stevearc/conform.nvim',
         event = { 'BufWritePre' },
         cmd = { 'ConformInfo' },
@@ -44,6 +44,7 @@ return {
                 cpp = { 'clang_format' },
                 hpp = { 'clang_format' },
                 yaml = { 'actionlint' },
+                sql = { 'sqlfluff', '--tab-width', '4' },
                 --
                 -- You can use 'stop_after_first' to run the first available formatter from the list
                 javascript = { 'biome-check', 'prettierd', 'prettier', stop_after_first = true },
