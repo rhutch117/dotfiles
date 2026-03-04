@@ -7,20 +7,35 @@ return {
         'folke/tokyonight.nvim',
         priority = 1000, -- Make sure to load this before all the other start plugins.
         config = function()
-            ---@diagnostic disable-next-line: missing-fields
-            require('tokyonight').setup({
-                styles = {
-                    comments = { italic = false }, -- Disable italics in comments
-                },
+            local tn = require('tokyonight')
+
+            tn.setup({
+                style = 'night',
+                transparent = true, -- Crucial: let tmux colors show through
+                styles = { comments = { italic = false } },
             })
 
-            -- Load the colorscheme here.
-            -- Like many other themes, this one has different styles, and you could load
-            -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
             vim.cmd.colorscheme('tokyonight-night')
 
-            -- Change the color of visual mode highlights
-            vim.cmd('highlight Visual guifg=None guibg=#4c00a4')
+            -- Create an autocommand group for tmux focus
+            local tmux_focus_group = vim.api.nvim_create_augroup('TmuxFocus', { clear = true })
+
+            -- When you ENTER the tmux pane: make it your preferred dark color
+            vim.api.nvim_create_autocmd('FocusGained', {
+                group = tmux_focus_group,
+                callback = function()
+                    vim.cmd('highlight Normal guibg=#0f0f14')
+                end,
+            })
+
+            -- When you LEAVE the tmux pane: make it "none" (transparent)
+            -- This allows the DARKER tmux inactive-style to show through
+            vim.api.nvim_create_autocmd('FocusLost', {
+                group = tmux_focus_group,
+                callback = function()
+                    vim.cmd('highlight Normal guibg=none')
+                end,
+            })
         end,
     },
     {

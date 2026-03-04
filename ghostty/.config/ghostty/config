@@ -8,3 +8,7 @@ cursor-style-blink = false
 
 window-padding-x = 10
 window-padding-balance = true
+
+# Match vim tokyonight-night colorscheme
+background = #0f0f14
+foreground = #c0caf5
