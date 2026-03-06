@@ -2,6 +2,7 @@ theme = TokyoNight
 font-family = "FiraCode Nerd Font"
 
 keybind = cmd+k=text:\x0c
+macos-titlebar-style = hidden
 
 cursor-style = block
 cursor-style-blink = false
