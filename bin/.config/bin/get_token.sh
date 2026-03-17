@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 KCHOST=http://localhost:8080
-# KCHOST=http://keycloak.local.sphinxdefense.com
 REALM=aswan
 CLIENT_ID=${CLIENT_ID:-orchestrator_service}
 CLIENT_SECRET=${CLIENT_SECRET:-orchestrator_service_client_secret}

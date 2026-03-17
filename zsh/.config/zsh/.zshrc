@@ -67,9 +67,5 @@ autoload -Uz +X compinit && compinit
 _comp_options+=(globdots) # with hidden files
 
 export PATH="$HOME/.local/bin:$PATH"
-export CLAUDE_CODE_USE_BEDROCK=1
-export AWS_REGION=us-gov-west-1
-export AWS_PROFILE=bedrock
-export ANTHROPIC_MODEL='arn:aws-us-gov:bedrock:us-gov-west-1:125005550194:inference-profile/us-gov.anthropic.claude-sonnet-4-5-20250929-v1:0'
 
 eval "$(starship init zsh)"
