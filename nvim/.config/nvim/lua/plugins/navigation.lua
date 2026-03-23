@@ -19,6 +19,14 @@ return {
                 disable_netrw = true,
                 hijack_unnamed_buffer_when_opening = true,
 
+                filesystem_watchers = {
+                    ignore_dirs = {
+                        "*/coverage/unit/.tmp",
+                        "node_modules",
+                        ".git",
+                    },
+                },
+
                 diagnostics = {
                     enable = true,
                 },
