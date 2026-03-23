@@ -12,6 +12,13 @@ return {
             tn.setup({
                 style = 'night',
                 styles = { comments = { italic = false } },
+                on_highlights = function(highlights, _)
+                    for _, hl in pairs(highlights) do
+                        if type(hl) == 'table' then
+                            hl.bold = false
+                        end
+                    end
+                end,
             })
 
             vim.cmd.colorscheme('tokyonight-night')
