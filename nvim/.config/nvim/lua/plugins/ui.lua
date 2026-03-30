@@ -9,6 +9,9 @@ return {
                 -- optional configuration here
             })
             vim.cmd('colorscheme vague')
+
+            -- Custom highlight: purple visual selection
+            vim.api.nvim_set_hl(0, 'Visual', { bg = '#4c00a4' })
         end,
     },
     -- { -- You can easily change to a different colorscheme.
