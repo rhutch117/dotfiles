@@ -32,6 +32,9 @@ vim.keymap.set('n', '<leader>nn', require('markdown-togglecheck').toggle, { desc
 -- toggle checkbox (it doesn't remember toggle state and always creates [ ])
 vim.keymap.set('n', '<leader>nN', require('markdown-togglecheck').toggle_box, { desc = 'Toggle Checkbox' })
 
+-- Copy current file's full path to clipboard
+vim.keymap.set('n', '<leader>cp', ':let @+ = expand("%:p")<CR>', { desc = 'Copy full path' })
+
 -- Visual --
 -- Stay in visual mode while indenting
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent selection left' })
