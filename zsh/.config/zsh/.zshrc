@@ -1,5 +1,3 @@
-source $ZDOTDIR/envvars
-
 # Navigation
 setopt AUTO_CD                   # Go to folder path without using cd.
 

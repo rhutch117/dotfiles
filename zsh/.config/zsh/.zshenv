@@ -1,3 +1,6 @@
+export XDG_CONFIG_HOME="$HOME/.config"
+export ZDOTDIR="$HOME/.config/zsh"
+
 # General
 export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
@@ -20,4 +23,4 @@ if type rg &> /dev/null; then
 fi
 
 # Machine-local env vars (not tracked in source control)
-[[ -f "$ZDOTDIR/envvars.local" ]] && source "$ZDOTDIR/envvars.local"
+[[ -f "$ZDOTDIR/.zshenv.local" ]] && source "$ZDOTDIR/.zshenv.local"
