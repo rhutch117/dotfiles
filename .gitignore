@@ -2,27 +2,31 @@
 .DS_Store
 
 # Zsh state/history
-zsh/.config/zsh/.zcompdump*
-zsh/.config/zsh/.zsh_history
+zsh/zsh/.zcompdump*
+zsh/zsh/.zsh_history
 
 # Karabiner backups
-karabiner/.config/karabiner/automatic_backups/
+karabiner/karabiner/automatic_backups/
 
 # GitHub CLI auth (contains tokens)
-github/.config/gh/hosts.yml
+gh/gh/hosts.yml
 
 # Neovim generated files
-nvim/.config/nvim/spell/*.spl
+nvim/nvim/spell/*.spl
 
 # Lazygit state (runtime, not config)
-lazygit/.config/lazygit/state.yml
+lazygit/lazygit/state.yml
 
 # Optional: plugin/vendor dirs
-zsh/.config/zsh/zsh-completions/
-zsh/.config/zsh/zsh-syntax-highlighting/
+zsh/zsh/zsh-completions/
+zsh/zsh/zsh-syntax-highlighting/
 
 # tmux plugins (managed by tpm)
-tmux/.config/tmux/plugins/
+tmux/tmux/plugins/
 
 # Machine-local env vars (personal/work, not shared)
-zsh/.config/zsh/envvars.local
+zsh/zsh/.zshenv.local
+
+# Raycast extensions and AI data (contains downloaded extensions and possibly API keys)
+raycast/raycast/extensions/
+raycast/raycast/ai/
