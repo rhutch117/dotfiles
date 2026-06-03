@@ -28,10 +28,3 @@ Remove a single package
 ```bash
 stow -D package_name
 ```
-
-## Tools
-[Ghostty](https://ghostty.org/docs) is my primary terminal
-
-[Tmux](https://github.com/tmux/tmux/wiki) allows for multiple terminal sessions
-
-[Neovim](https://github.com/neovim/neovim) is my primary editor of choice.
