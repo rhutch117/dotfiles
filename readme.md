@@ -1,19 +1,30 @@
 # Dotfiles
 
 Dotfiles are managed using stow.
-Note that the path within each package's name, will be the same path used when moving the config - starting from the home dir.
+The target is `~/.config` (set in `.stowrc`). The path within each package mirrors the structure under that target.
 
 For example:
-`tmux/.config/tmux/tmux.conf` -> `~/.config/tmux/tmux.conf`
+`tmux/tmux/tmux.conf` -> `~/.config/tmux/tmux.conf`
+`starship/starship.toml` -> `~/.config/starship.toml`
 
 
 ## Operations
-Move a config file from `~/dotfiles` to home directory
+Stow all packages
+```bash
+stow */
+```
+
+Restow all packages (remove and recreate all symlinks)
+```bash
+stow -R */
+```
+
+Stow a single package
 ```bash
 stow package_name
 ```
 
-Remove a config from home directory
+Remove a single package
 ```bash
 stow -D package_name
 ```
