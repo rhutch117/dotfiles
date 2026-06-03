@@ -1,0 +1,14 @@
+# Machine-local environment variables
+# Copy this file to envvars.local and fill in values for this machine.
+# envvars.local is gitignored — never committed to source control.
+
+# Work
+# export WORK_API_KEY=""
+# export WORK_ORG=""
+
+# Personal tokens / credentials
+# export GITHUB_TOKEN=""
+# export ANTHROPIC_API_KEY=""
+
+# Machine-specific paths or overrides
+# export PATH="$HOME/work/bin:$PATH"

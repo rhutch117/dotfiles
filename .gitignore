@@ -23,3 +23,6 @@ zsh/.config/zsh/zsh-syntax-highlighting/
 
 # tmux plugins (managed by tpm)
 tmux/.config/tmux/plugins/
+
+# Machine-local env vars (personal/work, not shared)
+zsh/.config/zsh/envvars.local

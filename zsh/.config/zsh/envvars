@@ -18,3 +18,6 @@ export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden'
 fi
+
+# Machine-local env vars (not tracked in source control)
+[[ -f "$ZDOTDIR/envvars.local" ]] && source "$ZDOTDIR/envvars.local"
