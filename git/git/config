@@ -85,9 +85,11 @@
 	process = git-lfs filter-process
 	required = true
 
-[http "https://gitea.local/"]
-	sslVerify = false
-
 # Work repos — override identity when inside ~/work/
 [includeIf "gitdir:~/work/"]
 	path = ~/.config/git/config.work
+
+# Local repos — override identity when inside ~/gitea/
+[includeIf "gitdir:~/gitea/"]
+	path = ~/.config/git/config.gitea
+

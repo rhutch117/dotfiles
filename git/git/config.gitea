@@ -1,0 +1,9 @@
+[user]
+	name = ryan
+	email = rwhutchison@live.com
+[credential]
+	username = mooivarken
+
+[url "git@gitea.coastl.io:"]
+	insteadOf = https://gitea.coastl.io/
+
