@@ -31,7 +31,6 @@ alias tml="tmux ls"
 alias ls="lsd -lah"      # ls with a tree view
 alias ll="eza -lah -g --icons --tree --level=2"      # ls with a tree view
 alias cat="bat"                     # Use 'bat' as a replacement for 'cat'
-alias grep='rg --color=auto'
 
 # System
 alias shutdown='sudo shutdown now'
