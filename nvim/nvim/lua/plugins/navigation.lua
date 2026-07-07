@@ -21,9 +21,9 @@ return {
 
                 filesystem_watchers = {
                     ignore_dirs = {
-                        "*/coverage/unit/.tmp",
-                        "node_modules",
-                        ".git",
+                        '*/coverage/unit/.tmp',
+                        'node_modules',
+                        '.git',
                     },
                 },
 
@@ -57,7 +57,7 @@ return {
                 },
                 actions = {
                     open_file = {
-                        quit_on_open = true,
+                        quit_on_open = false,
                     },
                     change_dir = {
                         enable = false,
