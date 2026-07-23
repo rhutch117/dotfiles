@@ -2,4 +2,4 @@
 truncation_length = 2
 
 [aws]
-disabled = false
+disabled = true

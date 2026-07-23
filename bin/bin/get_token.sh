@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 KCHOST=http://localhost:8080
-REALM=aswan
+REALM=smpa
 CLIENT_ID=${CLIENT_ID:-orchestrator_service}
 CLIENT_SECRET=${CLIENT_SECRET:-orchestrator_service_client_secret}
 
