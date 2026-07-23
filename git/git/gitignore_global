@@ -58,3 +58,5 @@ desktop.ini
 ################
 venv/
 .venv/
+
+**/.claude/settings.local.json
