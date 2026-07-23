@@ -13,10 +13,29 @@ alias k="kubectl"
 
 alias sz="source ~/.config/zsh/.zshrc"
 
+# Safety nets
+# prompt before overwriting
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
 # Launch `ng serve` in background and 
 # direct stderr and stdout to /dev/null
 # alias ngs="ng serve > /dev/null 2>&1 &"
-# alias leet="leetcode"
+
+# find processes by name
+alias pg='ps aux | grep -v grep | grep -i'
+
+# find who's using a port
+alias port='netstat -tuln | grep'
+
+
+# tar flags are hard
+alias untar='tar -xvf'
+
+tardir() {
+    tar -czf "${1%/}.tar.gz" "$1"
+}
 
 # Lazygit
 alias lg="lazygit"
