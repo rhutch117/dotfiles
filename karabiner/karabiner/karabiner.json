@@ -4,6 +4,25 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Change MX Master Thumb Click (Cmd+Tab) to Mission Control",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "vendor_id": 1133 }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "key_code": "mission_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Map ctrl + [ to escape",
                         "manipulators": [
                             {
@@ -78,6 +97,7 @@
                         "product_id": 45091,
                         "vendor_id": 1133
                     },
+                    "ignore": false,
                     "manipulate_caps_lock_led": false
                 },
                 {
