@@ -48,7 +48,8 @@ alias tml="tmux ls"
 
 # Utilities
 alias ls="lsd -lah"      # ls with a tree view
-alias ll="eza -lah -g --icons --tree --level=2"      # ls with a tree view
+alias ll="lsd --long --all --tree --depth 2"
+alias lll="lsd --long --all --tree --depth 3"
 alias cat="bat"                     # Use 'bat' as a replacement for 'cat'
 
 # System
