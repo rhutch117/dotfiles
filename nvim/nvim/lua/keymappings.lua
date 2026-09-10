@@ -19,6 +19,12 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Resize windows in larger steps than the default single column/row
+vim.keymap.set('n', '<C-w>>', '10<C-w>>', { desc = 'Increase window width' })
+vim.keymap.set('n', '<C-w><', '10<C-w><', { desc = 'Decrease window width' })
+vim.keymap.set('n', '<C-w>+', '5<C-w>+', { desc = 'Increase window height' })
+vim.keymap.set('n', '<C-w>-', '5<C-w>-', { desc = 'Decrease window height' })
+
 -- Surround a word with quotes, backticks, and others
 vim.keymap.set('n', '<leader>"', 'viw<esc>a"<esc>bi"<esc>lel', { desc = 'Surround with single-quotes' })
 vim.keymap.set('n', "<leader>'", "viw<esc>a'<esc>bi'<esc>lel", { desc = 'Surround with double-quotes' })
