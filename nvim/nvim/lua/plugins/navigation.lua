@@ -19,6 +19,10 @@ return {
                 disable_netrw = true,
                 hijack_unnamed_buffer_when_opening = true,
 
+                view = {
+                    width = 50,
+                },
+
                 filesystem_watchers = {
                     ignore_dirs = {
                         '*/coverage/unit/.tmp',
