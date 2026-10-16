@@ -17,6 +17,8 @@ return {
             mason_lsp.setup({
                 ensure_installed = servers,
                 automatic_installation = true,
+                -- pylsp is installed but pyright handles python; avoid duplicate results
+                automatic_enable = { exclude = { 'pylsp' } },
             })
 
             -- diagnostics
