@@ -15,8 +15,9 @@ return {
         -- setting the keybinding for LazyGit with 'keys' is recommended in
         -- order to load the plugin when the command is run for the first time
         keys = {
-            { '<leader>gg', '<cmd>LazyGit<cr>', desc = 'Open lazy git' },
-            { '<leader>gb', '<cmd>Git blame<cr>', desc = 'Git blame' },
+            -- open lazygit in a new tmux window. It gets slow when opening and closing many times. Maybe a memory leak?
+            { '<leader>gg', function() vim.cmd("!tmux new-window -c " .. vim.fn.getcwd() .. " -- lazygit") end, desc = 'Open LazyGit in tmux window', silent = true },
+            { '<leader>gb', '<cmd>Git blame<cr>',                                                               desc = 'Git blame' },
         },
     },
     { -- Adds git related signs to the gutter, as well as utilities for managing changes

@@ -13,6 +13,11 @@ vim.keymap.set('n', '<leader><leader>de', function()
     vim.diagnostic.enable()
 end, { desc = 'Enable diagnostics' })
 
+
+-- Lazygit
+vim.keymap.set("n", "<leader>gg", ":!tmux new-window -c " .. vim.fn.getcwd() .. " -- lazygit <CR><CR>", { silent = true })
+
+
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
