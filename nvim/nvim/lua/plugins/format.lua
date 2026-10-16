@@ -2,7 +2,7 @@ return {
     {
         'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
     },
-    {                       -- Autoformat
+    { -- Autoformat
         'stevearc/conform.nvim',
         event = { 'BufWritePre' },
         cmd = { 'ConformInfo' },
@@ -15,10 +15,21 @@ return {
                 mode = '',
                 desc = '[F]ormat buffer',
             },
+            {
+                '<leader>tf',
+                function()
+                    vim.b.disable_autoformat = not vim.b.disable_autoformat
+                end,
+                desc = 'Toggle Format-on-Save',
+            },
         },
         opts = {
             notify_on_error = false,
             format_on_save = function(bufnr)
+                if vim.g.disable_autoformat then
+                    return
+                end
+
                 -- Disable "format_on_save lsp_fallback" for languages that don't
                 -- have a well standardized coding style. You can add additional
                 -- languages here or re-enable it for the disabled ones.
