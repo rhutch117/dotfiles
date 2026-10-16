@@ -12,7 +12,7 @@ return {
             -- mason setup
             require('mason').setup()
             local mason_lsp = require('mason-lspconfig')
-            local servers = { 'clangd', 'gopls', 'pyright', 'pylsp', 'ts_ls', 'lua_ls', 'ruff' }
+            local servers = { 'clangd', 'gopls', 'pyright', 'ts_ls', 'lua_ls', 'ruff' }
 
             mason_lsp.setup({
                 ensure_installed = servers,
@@ -68,29 +68,17 @@ return {
             -- LSP servers
             local lsp_servers = {
                 clangd = {
-                    cmd = { 'clangd', '--fallback-style={BasedOnStyle: Google, IndentWidth: 2}' },
+                    cmd = {
+                        'clangd',
+                        '--fallback-style={BasedOnStyle: Google, IndentWidth: 2}',
+                    },
+                    filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
                 },
                 gopls = {
                     settings = {
                         gopls = {
                             analyses = { unusedparams = true, shadow = true },
                             staticcheck = true,
-                        },
-                    },
-                },
-                pylsp = {
-                    on_attach = function(client)
-                        -- prevent pylsp from providing "go to definition" (pyright handles this instead)
-                        client.server_capabilities.definitionProvider = false
-                    end,
-                    settings = {
-                        pylsp = {
-                            plugins = {
-                                pyflakes = { enabled = false },
-                                pycodestyle = {
-                                    maxLineLength = 120,
-                                }
-                            },
                         },
                     },
                 },
