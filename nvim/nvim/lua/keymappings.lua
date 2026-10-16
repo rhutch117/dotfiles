@@ -32,6 +32,19 @@ vim.keymap.set('n', '<leader>`', 'viw<esc>a`<esc>bi`<esc>lel', { desc = 'Surroun
 vim.keymap.set('n', '<leader>*', 'viw<esc>a*<esc>bi*<esc>lel', { desc = 'Surround with asterisks' })
 
 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {
+    desc = 'Code Action',
+})
+vim.keymap.set('n', '<leader>m', '<cmd>make! | cwindow<CR>', { desc = 'Build' })
+vim.keymap.set('n', '<leader>q', function()
+    for _, win in ipairs(vim.fn.getwininfo()) do
+        if win.quickfix == 1 then
+            vim.cmd('cclose')
+            return
+        end
+    end
+    vim.cmd('copen')
+end, { desc = 'Toggle quickfix list' })
 
 -- toggle checked / create checkbox if it doesn't exist
 vim.keymap.set('n', '<leader>nn', require('markdown-togglecheck').toggle, { desc = 'Toggle Checkmark' })
@@ -75,8 +88,6 @@ vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = '[ ] Find existing b
 vim.keymap.set('n', '<leader>sy', function()
     builtin.lsp_document_symbols({ symbols = { 'function', 'method' } })
 end, { desc = '[y] Search symbols in current file' })
-
-
 
 -- Shortcut for searching your Neovim configuration files
 vim.keymap.set('n', '<leader>sn', function()
