@@ -13,10 +13,14 @@ vim.keymap.set('n', '<leader><leader>de', function()
     vim.diagnostic.enable()
 end, { desc = 'Enable diagnostics' })
 
-
 -- Lazygit
-vim.keymap.set("n", "<leader>gg", ":!tmux new-window -c " .. vim.fn.getcwd() .. " -- lazygit <CR><CR>", { silent = true })
-
+-- open lazygit in a new tmux window. It gets slow when opening and closing many times. Maybe a memory leak?
+vim.keymap.set(
+    'n',
+    '<leader>gg',
+    ':!tmux new-window -c ' .. vim.fn.getcwd() .. ' -- lazygit <CR><CR>',
+    { silent = true }
+)
 
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
